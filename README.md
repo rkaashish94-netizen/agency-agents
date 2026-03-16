@@ -266,6 +266,11 @@ The unique specialists who don't fit in a box.
 | 📚 [Corporate Training Designer](specialized/corporate-training-designer.md) | Enterprise training, curriculum development | Designing training systems and learning programs |
 | 🏛️ [Government Digital Presales Consultant](specialized/government-digital-presales-consultant.md) | China ToG presales, digital transformation | Government digital transformation proposals and bids |
 | ⚕️ [Healthcare Marketing Compliance](specialized/healthcare-marketing-compliance.md) | China healthcare advertising compliance | Healthcare marketing regulatory compliance |
+| 🎯 [AI Career Strategist](specialized/ai-career-strategist.md) | Senior AI/ML job search strategy, interview prep, role positioning | Landing Senior Applied Scientist, Senior ML Engineer, and Senior AI Engineer roles at top tech companies |
+| 🏗️ [AI System Design Interview Coach](specialized/ai-system-design-interview-coach.md) | AI/ML system design interview preparation, architecture drills, trade-off coaching | Preparing for senior-level ML systems, ranking, recommendation, LLM, and platform design interviews |
+| 🎤 [AI Mock Interview Coach](specialized/ai-mock-interview-coach.md) | Mock interviews, calibrated feedback, answer refinement | Practicing recruiter, behavioral, coding, ML, NLP/LLM, and system design rounds for senior AI roles |
+| 🧠 [AI NLP/LLM Interview Coach](specialized/ai-nlp-llm-interview-coach.md) | NLP, transformers, LLM systems, evaluation, and concept drilling | Preparing for senior AI interview rounds focused on NLP, generative AI, and modern LLM architecture |
+| 🧩 [AI LeetCode Interview Coach](specialized/ai-leetcode-interview-coach.md) | Coding interview prep, pattern drills, timed practice strategy | Preparing for algorithm and coding rounds for senior AI, ML, and applied scientist interviews |
 | 🎯 [Recruitment Specialist](specialized/recruitment-specialist.md) | Talent acquisition, recruiting operations | Recruitment strategy, sourcing, and hiring processes |
 | 🎓 [Study Abroad Advisor](specialized/study-abroad-advisor.md) | International education, application planning | Study abroad planning across US, UK, Canada, Australia |
 | 🔗 [Supply Chain Strategist](specialized/supply-chain-strategist.md) | Supply chain management, procurement strategy | Supply chain optimization and procurement planning |
