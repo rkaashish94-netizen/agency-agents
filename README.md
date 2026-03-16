@@ -172,7 +172,6 @@ Growing your audience, one authentic interaction at a time.
 | 🔒 [Private Domain Operator](marketing/marketing-private-domain-operator.md) | WeCom, private traffic, community operations | Building enterprise WeChat private domain ecosystems |
 | 🎬 [Short-Video Editing Coach](marketing/marketing-short-video-editing-coach.md) | Post-production, editing workflows, platform specs | Hands-on short-video editing training and optimization |
 | 🔥 [Weibo Strategist](marketing/marketing-weibo-strategist.md) | Sina Weibo, trending topics, fan engagement | Full-spectrum Weibo operations and growth |
-| 🔮 [AI Citation Strategist](marketing/marketing-ai-citation-strategist.md) | AEO/GEO, AI recommendation visibility, citation auditing | Improving brand visibility across ChatGPT, Claude, Gemini, Perplexity |
 
 ### 📊 Product Division
 
@@ -267,13 +266,15 @@ The unique specialists who don't fit in a box.
 | 📚 [Corporate Training Designer](specialized/corporate-training-designer.md) | Enterprise training, curriculum development | Designing training systems and learning programs |
 | 🏛️ [Government Digital Presales Consultant](specialized/government-digital-presales-consultant.md) | China ToG presales, digital transformation | Government digital transformation proposals and bids |
 | ⚕️ [Healthcare Marketing Compliance](specialized/healthcare-marketing-compliance.md) | China healthcare advertising compliance | Healthcare marketing regulatory compliance |
+| 🎯 [AI Career Strategist](specialized/ai-career-strategist.md) | Senior AI/ML job search strategy, interview prep, role positioning | Landing Senior Applied Scientist, Senior ML Engineer, and Senior AI Engineer roles at top tech companies |
+| 🏗️ [AI System Design Interview Coach](specialized/ai-system-design-interview-coach.md) | AI/ML system design interview preparation, architecture drills, trade-off coaching | Preparing for senior-level ML systems, ranking, recommendation, LLM, and platform design interviews |
+| 🎤 [AI Mock Interview Coach](specialized/ai-mock-interview-coach.md) | Mock interviews, calibrated feedback, answer refinement | Practicing recruiter, behavioral, coding, ML, NLP/LLM, and system design rounds for senior AI roles |
+| 🧠 [AI NLP/LLM Interview Coach](specialized/ai-nlp-llm-interview-coach.md) | NLP, transformers, LLM systems, evaluation, and concept drilling | Preparing for senior AI interview rounds focused on NLP, generative AI, and modern LLM architecture |
+| 🧩 [AI LeetCode Interview Coach](specialized/ai-leetcode-interview-coach.md) | Coding interview prep, pattern drills, timed practice strategy | Preparing for algorithm and coding rounds for senior AI, ML, and applied scientist interviews |
 | 🎯 [Recruitment Specialist](specialized/recruitment-specialist.md) | Talent acquisition, recruiting operations | Recruitment strategy, sourcing, and hiring processes |
 | 🎓 [Study Abroad Advisor](specialized/study-abroad-advisor.md) | International education, application planning | Study abroad planning across US, UK, Canada, Australia |
 | 🔗 [Supply Chain Strategist](specialized/supply-chain-strategist.md) | Supply chain management, procurement strategy | Supply chain optimization and procurement planning |
 | 🗺️ [Workflow Architect](specialized/specialized-workflow-architect.md) | Workflow discovery, mapping, and specification | Mapping every path through a system before code is written |
-| ☁️ [Salesforce Architect](specialized/specialized-salesforce-architect.md) | Multi-cloud Salesforce design, governor limits, integrations | Enterprise Salesforce architecture, org strategy, deployment pipelines |
-| 🇫🇷 [French Consulting Market Navigator](specialized/specialized-french-consulting-market.md) | ESN/SI ecosystem, portage salarial, rate positioning | Freelance consulting in the French IT market |
-| 🇰🇷 [Korean Business Navigator](specialized/specialized-korean-business-navigator.md) | Korean business culture, 품의 process, relationship mechanics | Foreign professionals navigating Korean business relationships |
 
 ### 🎮 Game Development Division
 
@@ -328,18 +329,6 @@ Building worlds, systems, and experiences across every major engine.
 | ⚙️ [Roblox Systems Scripter](game-development/roblox-studio/roblox-systems-scripter.md) | Luau, RemoteEvents/Functions, DataStore, server-authoritative module architecture | Building secure Roblox game systems, client-server communication, data persistence |
 | 🎯 [Roblox Experience Designer](game-development/roblox-studio/roblox-experience-designer.md) | Engagement loops, monetization, D1/D7 retention, onboarding flow | Designing Roblox game loops, Game Passes, daily rewards, player retention |
 | 👗 [Roblox Avatar Creator](game-development/roblox-studio/roblox-avatar-creator.md) | UGC pipeline, accessory rigging, Creator Marketplace submission | Roblox UGC items, HumanoidDescription customization, in-experience avatar shops |
-
-### 📚 Academic Division
-
-Scholarly rigor for world-building, storytelling, and narrative design.
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🌍 [Anthropologist](academic/academic-anthropologist.md) | Cultural systems, kinship, rituals, belief systems | Designing culturally coherent societies with internal logic |
-| 🌐 [Geographer](academic/academic-geographer.md) | Physical/human geography, climate, cartography | Building geographically coherent worlds with realistic terrain and settlements |
-| 📚 [Historian](academic/academic-historian.md) | Historical analysis, periodization, material culture | Validating historical coherence, enriching settings with authentic period detail |
-| 📜 [Narratologist](academic/academic-narratologist.md) | Narrative theory, story structure, character arcs | Analyzing and improving story structure with established theoretical frameworks |
-| 🧠 [Psychologist](academic/academic-psychologist.md) | Personality theory, motivation, cognitive patterns | Building psychologically credible characters grounded in research |
 
 ---
 
@@ -523,13 +512,11 @@ The Agency works natively with Claude Code, and ships conversion + install scrip
 **Step 1 -- Generate integration files:**
 ```bash
 ./scripts/convert.sh
-# Faster (parallel, output order may vary): ./scripts/convert.sh --parallel
 ```
 
 **Step 2 -- Install (interactive, auto-detects your tools):**
 ```bash
 ./scripts/install.sh
-# Faster (parallel, output order may vary): ./scripts/install.sh --no-interactive --parallel
 ```
 
 The installer scans your system for installed tools, shows a checkbox UI, and lets you pick exactly what to install:
@@ -567,16 +554,6 @@ The installer scans your system for installed tools, shows a checkbox UI, and le
 **Non-interactive (CI/scripts):**
 ```bash
 ./scripts/install.sh --no-interactive --tool all
-```
-
-**Faster runs (parallel)** — On multi-core machines, use `--parallel` so each tool is processed in parallel. Output order across tools is non-deterministic. Works with both interactive and non-interactive install: e.g. `./scripts/install.sh --interactive --parallel` (pick tools, then install in parallel) or `./scripts/install.sh --no-interactive --parallel`. Job count defaults to `nproc` (Linux), `sysctl -n hw.ncpu` (macOS), or 4; override with `--jobs N`.
-
-```bash
-./scripts/convert.sh --parallel                    # convert all tools in parallel
-./scripts/convert.sh --parallel --jobs 8           # cap parallel jobs
-./scripts/install.sh --no-interactive --parallel   # install all detected tools in parallel
-./scripts/install.sh --interactive --parallel      # pick tools, then install in parallel
-./scripts/install.sh --no-interactive --parallel --jobs 4
 ```
 
 ---
@@ -769,9 +746,8 @@ cd /your/project
 When you add new agents or edit existing ones, regenerate all integration files:
 
 ```bash
-./scripts/convert.sh                    # regenerate all (serial)
-./scripts/convert.sh --parallel         # regenerate all in parallel (faster)
-./scripts/convert.sh --tool cursor      # regenerate just one tool
+./scripts/convert.sh        # regenerate all
+./scripts/convert.sh --tool cursor   # regenerate just one tool
 ```
 
 ---
